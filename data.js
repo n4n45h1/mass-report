@@ -206,25 +206,159 @@ const serverReportData = {
                 "フェイクニュースや有害な陰謀論の拡散": 112
             }
         },
+        "79": "SERVER_SPAM",
+        "82": "SERVER_VERBAL_HARASSMENT",
+        "83": "SERVER_VULGAR_LANG",
+        "86": "SERVER_HATE_IDENTITY",
+        "87": "SERVER_GORE",
+        "89": "SERVER_NSFW_DEGRADING",
+        "90": "SERVER_REVENGE_NCP",
+        "91": "SERVER_LOLI",
+        "94": "SERVER_ICAAM",
+        "95": "SERVER_CSAM",
+        "97": "SERVER_GLORIFY_VIOLENCE",
+        "98": "SERVER_EXTREMISM",
+        "99": "SERVER_FRAUD",
+        "102": "SERVER_ATO",
+        "103": "SERVER_ILLICIT_GOODS",
+        "105": "SERVER_HACKS_CHEATS",
+        "109": "SERVER_ACTIVE_RAID",
+        "112": "SERVER_HARMFUL_MISINFO",
+        "133": "STAGE_SELF_HARM_GENERAL"
+    }
+};
+
+// Discord Message Report データ
+const messageReportData = {
+    "name": "message",
+    "variant": "3",
+    "version": "1.0",
+    "postback_url": "/api/reporting/message",
+    "root_node_id": 3,
+    "success_node_id": 52,
+    "fail_node_id": 55,
+    "nodes": {
+        "3": {
+            "key": "MESSAGE_WELCOME",
+            "subkeys": {
+                "スパム": 79,
+                "攻撃またはハラスメント": 57,
+                "有害な誤情報または暴力の是認": 75,
+                "個人を特定できる情報を晒している": 60,
+                "その他": 61
+            }
+        },
+        "7": "GENERIC_SUBMIT",
+        "52": "MESSAGE_SUCCESS",
+        "55": "FAIL",
+        "57": {
+            "key": "ABUSE_OR_HARASSMENT",
+            "subkeys": {
+                "私または他人に対する言葉での嫌がらせ": 82,
+                "無礼、卑猥、または攻撃的な言葉遣い": 83,
+                "アイデンティティや弱みを理由としたヘイトを助長している": 86,
+                "露骨な表現、残酷なコンテンツ、望んでない性的コンテンツ": 66
+            }
+        },
+        "60": "SHARING_PII",
+        "61": {
+            "key": "SOMETHING_ELSE",
+            "subkeys": {
+                "Discordを使える最低年齢に達していない": 71,
+                "自傷行為または自殺に言及している": 73,
+                "BAN回避、レイド、別アカウントの使用": 74,
+                "有害な誤情報または暴力の是認": 75,
+                "なりすまし、欺瞞、詐欺": 99,
+                "盗まれたアカウントやクレジットカードを配っている": 102,
+                "ドラックやその他の既製品を販売している": 103,
+                "ハック、チート、フィッシング、またはその他の悪意のあるリンク": 105
+            }
+        },
+        "66": {
+            "key": "NSFW_UNWANTED",
+            "subkeys": {
+                "ゴア（流血）、動物虐待、他人にショックを与えることを意図した暴力的なコンテンツ": 87,
+                "成人を描いた、望んでいない性的画像": 88,
+                "成人を描いた侮辱的なポルノ": 89,
+                "リベンジポルノ、またはリベンジポルノを共有するという脅し": 90,
+                "未成年者の関わる性的コンテンツまたは性的行為": 68
+            }
+        },
+        "68": {
+            "key": "NSFW_MINOR",
+            "subkeys": {
+                "未成年者を性的に扱うイラスト（「ロリコン」、「ショタコン」、「幼獣ポルノ」など）": 91,
+                "未成年者について性的な話をしている人物がいる": 92,
+                "未成年者に性的な示唆を含む、または性的なメッセージを送っている人物がいる": 93,
+                "未成年者が性的なメッセージを投稿または送信している": 94,
+                "現実の子供に対する性的虐待の写真または動画": 95
+            }
+        },
+        "71": {
+            "key": "UNDERAGE_USER",
+            "subkeys": {
+                "はい、このメッセージ内で年齢を宣言しています": 106,
+                "いいえ、このメッセージ内で年齢を宣言していません": 56
+            }
+        },
+        "73": {
+            "key": "SELF_HARM",
+            "subkeys": {
+                "自傷行為を計画しているのではないかと懸念される": 113,
+                "他者に自傷行為を行うように促している": 107
+            }
+        },
+        "74": {
+            "key": "BAN_EVASION_RAID",
+            "subkeys": {
+                "別のDiscordサーバーを攻撃すると脅している": 108,
+                "現行のレイドを宣言または奨励している": 109,
+                "BANされているにも関わらず再度サーバーに参加した": 110,
+                "ブロックしたにもかかわらずメッセージを送ってきている": 111
+            }
+        },
+        "75": {
+            "key": "MISINFO_EXTREMISM",
+            "subkeys": {
+                "誤情報または陰謀論を広めている": 76,
+                "暴力行為を賛美または美化している": 97,
+                "アイデンティティや弱みを理由としたヘイトを助長している": 86
+            }
+        },
+        "76": {
+            "key": "SPREADING_MISINFO",
+            "subkeys": {
+                "自分または知人について悪口を言っている": 82,
+                "フェイクニュースや有害な陰謀論を広めている": 112
+            }
+        },
         "79": "MESSAGE_SPAM",
         "82": "MESSAGE_VERBAL_HARASSMENT",
         "83": "MESSAGE_VULGAR_LANG",
         "86": "MESSAGE_HATE_IDENTITY",
         "87": "MESSAGE_GORE",
+        "88": "MESSAGE_UNSOLICITED_PORN",
         "89": "MESSAGE_NSFW_DEGRADING",
         "90": "MESSAGE_REVENGE_NCP",
         "91": "MESSAGE_LOLI",
+        "92": "MESSAGE_TALKING_ABOUT_MINOR",
+        "93": "MESSAGE_GROOMING_MINOR",
         "94": "MESSAGE_ICAAM",
         "95": "MESSAGE_CSAM",
         "97": "MESSAGE_GLORIFY_VIOLENCE",
-        "98": "MESSAGE_EXTREMISM",
         "99": "MESSAGE_FRAUD",
         "102": "MESSAGE_ATO",
         "103": "MESSAGE_ILLICIT_GOODS",
         "105": "MESSAGE_HACKS_CHEATS",
+        "106": "MESSAGE_UNDERAGE_CONFIRM",
+        "107": "MESSAGE_SELF_HARM_ENCOURAGE",
+        "108": "MESSAGE_THREATEN_RAID",
         "109": "MESSAGE_ACTIVE_RAID",
+        "110": "MESSAGE_BAN_EVASION",
+        "111": "MESSAGE_BLOCK_EVASION",
         "112": "MESSAGE_HARMFUL_MISINFO",
-        "133": "STAGE_SELF_HARM_GENERAL"
+        "113": "MESSAGE_SELF_HARM_RISK",
+        "56": "UNDERAGE_NEEDS_MORE_INFO"
     }
 };
 
@@ -241,6 +375,7 @@ const cfnetworkVersions = [
     "3826.400.110", "3826.400.100", "3826.300.110"
 ];
 
+// ランダムなUser Agentを生成
 function generateRandomUserAgent() {
     const version = discordVersions[Math.floor(Math.random() * discordVersions.length)];
     const darwin = darwinVersions[Math.floor(Math.random() * darwinVersions.length)];
