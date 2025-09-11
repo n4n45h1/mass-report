@@ -17,7 +17,7 @@
                 <h2>設定</h2>
                 <div class="form-group">
                     <label for="tokens">トークン</label>
-                    <textarea id="tokens" placeholder="Discordトークンを入力してください（改行で複数入力可能）" required></textarea>
+                    <textarea id="tokens" placeholder="Discord認証トークンを入力してください（改行で複数入力可能）" required></textarea>
                 </div>
 
                 <div class="form-group">
@@ -25,12 +25,23 @@
                     <select id="reportType">
                         <option value="user">ユーザーを通報</option>
                         <option value="server">サーバーを通報</option>
+                        <option value="message">メッセージを通報</option>
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="userServerGroup">
                     <label for="targetId">ターゲットID</label>
                     <input type="text" id="targetId" placeholder="通報対象のIDを入力してください" required>
+                </div>
+
+                <div class="form-group" id="messageGroup" style="display: none;">
+                    <label for="channelId">チャンネルID</label>
+                    <input type="text" id="channelId" placeholder="メッセージがあるチャンネルのIDを入力してください">
+                </div>
+
+                <div class="form-group" id="messageIdGroup" style="display: none;">
+                    <label for="messageId">メッセージID</label>
+                    <input type="text" id="messageId" placeholder="通報するメッセージのIDを入力してください">
                 </div>
 
                 <div class="form-group">
